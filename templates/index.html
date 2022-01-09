@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- #Author Naveenprabaharan S - GCT[1918L12] -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Deployement</title>
+
+    <style>
+        body{
+            width: 70%;
+            margin: 0 auto;
+            background-image: url("img1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #head1{
+            color: brown;
+        }
+
+        #head2{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="head2">Machine Learning!</h1>
+    <h5>#Author Naveenprabaharan S - GCT</h5>
+    <h1 id="head1">Animal Image Classification</h1>
+
+    <p>
+        Enter your image URL [Dog or Cat]:
+    </p>
+    
+    <form action="/" method="POST">
+        <input type="url" name="path" placeholder="Please Provide Url">
+        <input type="submit" >
+    </form>
+
+    {% if pred %}
+        <h3>Respective Image for Uploaded URL</h3>
+        <img src={{im_path}} alt="img" width="250" height="250"> 
+        <h3>Machine Learning Prediction : {{pred}} </h3>
+    {% endif %}
+
+</body>
+</html>
